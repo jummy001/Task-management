@@ -160,10 +160,3 @@ document.getElementById('logout-btn').addEventListener('click', () => {
 
 // Initial check
 checkAuth();
-
-
-
-
-
-
-

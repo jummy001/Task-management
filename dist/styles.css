@@ -1,6 +1,16 @@
 body {
     font-family: Arial, sans-serif;
     margin: 2rem;
+    background-color: white;
+    background-image: linear-gradient(
+        to right,
+        rgba(31, 20, 189, 0.9),
+        rgba(73, 97, 231, 0.7)
+    ),
+ url('task\ management.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 #task-form {
     margin-bottom: 1rem;
@@ -50,15 +60,71 @@ body {
 }
 
 #auth {
-    text-align: center;
-    margin-top: 20px;
+    /* text-align: center; */
+    /* margin-top: 20px; */
+    display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        gap: 10px; /* Add spacing between items */
+        max-width: 300px; /* Optional: limit the width */
+        margin: 0 auto; /* Center the container on the page */
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        color: #fff;
 }
 
 #main {
     text-align: center;
     margin-top: 20px;
+    background-color: palevioletred;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 button {
-    margin: 10px;
+     margin: 10px; 
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* Logout Button */
+.logout-btn {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    max-width: 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
