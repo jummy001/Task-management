@@ -8,7 +8,7 @@ document.getElementById('add-task').addEventListener('click', async () => {
     const newTask = { title, description, priority, deadline };
 
     try {
-        const response = await fetch('https://task-backend-6fir.onrender.com/api/tasks', {
+        const response = await fetch('http://localhost:5000/api/tasks', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newTask),
@@ -27,7 +27,7 @@ document.getElementById('add-task').addEventListener('click', async () => {
 async function fetchTasks() {
     const token = localStorage.getItem('token');
     try {
-        const response = await fetch('https://task-backend-6fir.onrender.com/api/tasks', {
+        const response = await fetch('http://localhost:5000/api/tasks', {
             headers: { Authorization: `Bearer ${token}` },
         });
         const tasks = await response.json();
@@ -62,7 +62,7 @@ async function fetchTasks() {
 async function deleteTask(event) {
     const taskId = event.target.getAttribute('data-id');
     try {
-        const response = await fetch(`https://task-backend-6fir.onrender.com/api/tasks/${taskId}`, {
+        const response = await fetch(`http://localhost:5000/api/tasks/${taskId}`, {
             method: 'DELETE',
         });
         const result = await response.json();
@@ -116,7 +116,7 @@ document.getElementById('register-btn').addEventListener('click', async () => {
     const password = document.getElementById('register-password').value;
 
     try {
-        const response = await fetch('https://task-backend-6fir.onrender.com/api/auth/register', {
+        const response = await fetch('http://localhost:5000/api/auth/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, email, password }),
@@ -134,7 +134,7 @@ document.getElementById('login-btn').addEventListener('click', async () => {
     const password = document.getElementById('login-password').value;
 
     try {
-        const response = await fetch('https://task-backend-6fir.onrender.com/api/auth/login', {
+        const response = await fetch('http://localhost:5000/api/auth/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password }),
@@ -160,3 +160,5 @@ document.getElementById('logout-btn').addEventListener('click', () => {
 
 // Initial check
 checkAuth();
+
+

@@ -1,14 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     margin: 2rem;
-    background-color: white;
-    background-image: linear-gradient(
-        to right,
-        rgba(31, 20, 189, 0.9),
-        rgba(73, 97, 231, 0.7)
+    background-color: none; 
+    background-image: linear-gradient( 
+         to right, 
+         rgba(31, 20, 189, 0.9), 
+         rgba(73, 97, 231, 0.7) 
     ),
- url('task\ management.jpg');
-background-size: cover;
+  url('task\ management.jpg'); 
+background-size: 1800px;
 background-position: center;
 background-repeat: no-repeat;
 }
@@ -59,41 +59,47 @@ background-repeat: no-repeat;
     display: none;
 }
 
-#auth {
-    /* text-align: center; */
-    /* margin-top: 20px; */
-    display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        gap: 10px; /* Add spacing between items */
-        max-width: 300px; /* Optional: limit the width */
-        margin: 0 auto; /* Center the container on the page */
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        color: #fff;
+#auth { 
+    text-align: center; 
+     margin-top: 20px; 
+     align-items: center;
+     max-width: 400px;
+     margin: auto;
+     border: 1px solid white;
+     border-radius: 13px;
+   gap: 10px;
+   padding: 10px;
+   
 }
-
+/* 
 #main {
     text-align: center;
     margin-top: 20px;
     background-color: palevioletred;
-    width: 90%;
-    max-width: 800px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    gap: 10px;
+    border: mediumpurple;
+    border-radius: 20px;
+    
+    
+    
 }
 
+
 button {
-     margin: 10px; 
+     margin: auto; 
     background-color: #007BFF;
     color: white;
     cursor: pointer;
+    
+   
+   
 }
+    
+
 
 button:hover {
     background-color: aqua;
@@ -112,19 +118,124 @@ input, button {
 h2 {
     margin-top: 20px;
     margin-bottom: 10px;
-}
+} */
 
+/* General Styles */
 
-/* Logout Button */
-.logout-btn {
-    align-self: flex-end;
+  
+  h1, h2 {
+    font-family: 'Helvetica', sans-serif;
+    color: none;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    color: white;
     padding: 10px 20px;
-    background-color: #f44336;
-    color: #fff;
-    max-width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .btn.logout {
+    background: #e71304;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn.logout:hover {
+    background: silver;
+  }
+  
+  /* Card Section */
+  .card {
+    background: rgb(156, 214, 156);
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Form Styles */
+  #task-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
     font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, textarea, select {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Buttons */
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  .add-task {
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  /* Tasks List */
+  #tasks-list {
+    margin-top: 20px;
+  }
+  
+  #tasks-list-section h2 {
+    margin-bottom: 10px;
+  }
+  
+
+  /* Priority Colors
+.task-card.low { border-left: 5px solid green; }
+.task-card.medium { border-left: 5px solid orange; }
+.task-card.high { border-left: 5px solid red; }
+
+/* Completed Tasks */
+/* .task-card.completed { */
+    /* opacity: 0.6; */
+    /* text-decoration: line-through;
 }
+
+/* Filters and Form */
+/* #filter-section, #task-form-section { */
+    /* margin-bottom: 20px; */ 
+/* } */ 

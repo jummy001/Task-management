@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Task Management System</title>
+  
 </head>
 <body>
     <div id="auth" class="view">
@@ -23,24 +24,89 @@
     </div>
 
 
-    
-    <div id="main" class="view hidden">
-        <h1>Welcome to Task Management System</h1>
-        <button id="logout-btn">Logout</button>
-    <div id="task-form">
-        <input type="text" id="task-title" placeholder="Task Title" required>
-        <textarea id="task-desc" placeholder="Task Description"></textarea>
-        <select id="task-priority">
-            <option value="Low">Low</option>
-            <option value="Medium" selected>Medium</option>
-            <option value="High">High</option>
-        </select>
-        <input type="date" id="task-deadline">
-        <button id="add-task">Add Task</button>
-    </div>
-    <div id="tasks-list"></div>
-    </div>
-    
+    <div id="main" class="view">
+        <header class="header">
+          <h1>Welcome To Task Management System</h1>
+          <button id="logout-btn" class="btn logout">Logout</button>
+        </header>
+        <section id="task-form-section" class="card">
+          <h2>Add a New Task</h2>
+          <form id="task-form">
+            <div class="form-group">
+              <label for="task-title">Task Title</label>
+              <input type="text" id="task-title" placeholder="Enter task title" required>
+            </div>
+            <div class="form-group">
+              <label for="task-desc">Task Description</label>
+              <textarea id="task-desc" placeholder="Enter task description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+                <label for="task-category">Category</label>
+                <select id="task-category">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Chores">Chores</option>
+                    <option value="Hobbies">Hobbies</option>
+                </select>
+            </div>
+            
+            <div class="form-group2">
+              <label for="task-deadline">Deadline</label>
+              <input type="date" id="task-deadline">
+            </div>
+            <button id="add-task" class="btn add-task">Add Task</button>
+          </form>
+        </section>
+        <section id="tasks-list-section" class="card">
+          <h2>Your Tasks</h2>
+
+          <section id="filter-section" class="card">
+            <h2>Filter Tasks</h2>
+            <label for="filter-priority">Priority:</label>
+            <select id="filter-priority">
+                <option value="All">All</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <label for="filter-status">Status:</label>
+            <select id="filter-status">
+                <option value="All">All</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </section>
+        
+
+        <div class="task-card">
+            <h3 class="task-title"></h3>
+            <p class="task-desc"></p>
+            <p class="task-priority"></p>
+            <p class="task-category"></p>
+            <p class="task-deadline"></p>
+            <button class="btn mark-complete">Mark Complete</button>
+            <button class="btn delete-task">Delete</button>
+        </div>
+        
+
+          <div id="tasks-list"></div>
+        </section>
+      </div>
+      
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+
