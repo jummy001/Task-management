@@ -86,7 +86,7 @@ fetchTasks();
 // Select DOM elements
 const authView = document.getElementById('auth');
 const mainView = document.getElementById('main');
-const tasksList = document.getElementById('tasks-list');
+const taskList = document.getElementById('tasks-list');
 
 // Function to show a specific view
 function showView(view) {

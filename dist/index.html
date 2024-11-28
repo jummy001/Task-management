@@ -48,60 +48,56 @@
                 <option value="High">High</option>
               </select>
             </div>
-
-            <div class="form-group">
-                <label for="task-category">Category</label>
-                <select id="task-category">
-                    <option value="Work">Work</option>
-                    <option value="Personal">Personal</option>
-                    <option value="Chores">Chores</option>
-                    <option value="Hobbies">Hobbies</option>
-                </select>
-            </div>
             
-            <div class="form-group2">
+            <div class="form-group">
               <label for="task-deadline">Deadline</label>
               <input type="date" id="task-deadline">
             </div>
             <button id="add-task" class="btn add-task">Add Task</button>
           </form>
         </section>
+    
         <section id="tasks-list-section" class="card">
+        
           <h2>Your Tasks</h2>
+          <p>Task Filtering menu</p>
+    <div>
+      <label for="priority-filter">Filter by Priority:</label>
+      <select id="priority-filter">
+          <option value="all">All</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+      </select>
+  </div>
 
-          <section id="filter-section" class="card">
-            <h2>Filter Tasks</h2>
-            <label for="filter-priority">Priority:</label>
-            <select id="filter-priority">
-                <option value="All">All</option>
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-            </select>
-            <label for="filter-status">Status:</label>
-            <select id="filter-status">
-                <option value="All">All</option>
-                <option value="Pending">Pending</option>
-                <option value="Completed">Completed</option>
-            </select>
-        </section>
+  <div id="task-list">
+      <!-- Example Task Items -->
+      <div class="task high-priority" data-priority="high" data-deadline="2024-11-30">
+          <h3>Professional Tasks</h3>
+          <p>Prepare project proposal, Team meeting at 2 PM, Submit quarterly report.</p>
+          <p>Priority: High</p>
+          <p>Deadline: 11/30/2024</p>
+      </div>
+      <div class="task medium-priority" data-priority="medium" data-deadline="2024-11-28">
+          <h3>Personal Tasks</h3>
+          <p>Buy groceries, Meditate for 15 minutes, Pick up kids from school.</p>
+          <p>Priority: Medium</p>
+          <p>Deadline: 11/28/2024</p>
+      </div>
+      <div class="task low-priority" data-priority="low" data-deadline="2024-12-25">
+          <h3>Creative and Leisure Tasks</h3>
+          <p>Finish painting project, Write a blog post, Play chess with a friend.</p>
+          <p>Priority: Low</p>
+          <p>Deadline: 12/25/2024</p>
+      </div>
+      <!-- Add more tasks here -->
+  </div>
         
-
-        <div class="task-card">
-            <h3 class="task-title"></h3>
-            <p class="task-desc"></p>
-            <p class="task-priority"></p>
-            <p class="task-category"></p>
-            <p class="task-deadline"></p>
-            <button class="btn mark-complete">Mark Complete</button>
-            <button class="btn delete-task">Delete</button>
-        </div>
         
-
           <div id="tasks-list"></div>
         </section>
       </div>
-      
     <script src="app.js"></script>
 </body>
 </html>
